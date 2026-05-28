@@ -33,14 +33,12 @@ def init(app):
 		if not param:
 			param = ""
 
-		bar = ""
 		if param:
 			lst = []
 			lst.append('safe')
 			lst.append(param)
 			lst.append('moresafe')
 			lst.pop(0)
-			bar = lst[0]
 
 		import random
 		import base64

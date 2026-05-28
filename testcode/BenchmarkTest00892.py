@@ -35,8 +35,8 @@ def init(app):
 		if not param:
 			param = ""
 
-		TestParam = "This should never happen"
-		if 'should' not in TestParam:
+		test_param = "This should never happen"
+		if 'should' not in test_param:
 			bar = "Ifnot case passed"
 		else:
 			bar = param
