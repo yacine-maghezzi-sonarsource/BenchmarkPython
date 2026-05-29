@@ -31,13 +31,13 @@ def init(app):
 		import urllib.parse
 		
 		query_string = request.query_string.decode('utf-8')
-		paramLoc = query_string.find("BenchmarkTest00941" + '=')
-		if paramLoc == -1:
+		param_loc = query_string.find("BenchmarkTest00941" + '=')
+		if param_loc == -1:
 			return f"request.query_string did not contain expected parameter \'{"BenchmarkTest00941"}\'."
-		param = query_string[paramLoc + len("BenchmarkTest00941") + 1:]
-		ampLoc = param.find('&')
-		if ampLoc != -1:
-			param = param[:ampLoc]
+		param = query_string[param_loc + len("BenchmarkTest00941") + 1:]
+		amp_loc = param.find('&')
+		if amp_loc != -1:
+			param = param[:amp_loc]
 		
 		param = urllib.parse.unquote_plus(param)
 

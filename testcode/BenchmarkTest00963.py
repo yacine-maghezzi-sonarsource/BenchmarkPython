@@ -31,13 +31,13 @@ def init(app):
 		import urllib.parse
 		
 		query_string = request.query_string.decode('utf-8')
-		paramLoc = query_string.find("BenchmarkTest00963" + '=')
-		if paramLoc == -1:
+		param_loc = query_string.find("BenchmarkTest00963" + '=')
+		if param_loc == -1:
 			return f"request.query_string did not contain expected parameter \'{"BenchmarkTest00963"}\'."
-		param = query_string[paramLoc + len("BenchmarkTest00963") + 1:]
-		ampLoc = param.find('&')
-		if ampLoc != -1:
-			param = param[:ampLoc]
+		param = query_string[param_loc + len("BenchmarkTest00963") + 1:]
+		amp_loc = param.find('&')
+		if amp_loc != -1:
+			param = param[:amp_loc]
 		
 		param = urllib.parse.unquote_plus(param)
 
@@ -45,9 +45,9 @@ def init(app):
 		map83104['keyA-83104'] = 'a-Value'
 		map83104['keyB-83104'] = param
 		map83104['keyC'] = 'another-Value'
-		bar = "safe!"
-		bar = map83104['keyB-83104']
-		bar = map83104['keyA-83104']
+		_ = "safe!"
+		_ = map83104['keyB-83104']
+		_ = map83104['keyA-83104']
 
 		import random
 		from helpers.utils import mysession
