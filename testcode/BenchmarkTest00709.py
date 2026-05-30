@@ -33,7 +33,6 @@ def init(app):
 			param = ""
 
 		string71878 = ''
-		data12 = ''
 		copy = string71878
 		string71878 = ''
 		string71878 += param
