@@ -42,7 +42,7 @@ def init(app):
 		string44059 = 'help'
 		string44059 += param
 		string44059 += 'snapes on a plane'
-		bar = string44059[4:-17]
+		_ = string44059[4:-17]
 
 		import random
 		from helpers.utils import mysession
